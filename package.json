@@ -1,0 +1,13 @@
+{
+  "name": "pgats",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "trabalho.js",
+  "scripts": {
+  "test": "mocha teste/*.js"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
