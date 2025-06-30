@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "echo 'simulando lint'",
     "test": "echo 'simulando teste de unidade com mocha'; exit 0",
-    "e2e": "echo 'simulando teste e2e'; exit 0"
+    "e2e": "echo 'simulando testes e2e'; exit 0"
   },
   "keywords": [],
   "author": "",
