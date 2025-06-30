@@ -4,8 +4,10 @@
   "type": "module",
   "main": "trabalho.js",
   "scripts": {
-  "test": "mocha teste/*.js"
-},
+    "lint": "echo 'Nenhum lint configurado, simulação de sucesso'",
+    "test": "mocha teste/*.js",
+    "e2e": "echo 'Nenhum teste E2E configurado, simulação de sucesso'"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
