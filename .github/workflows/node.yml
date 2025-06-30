@@ -37,41 +37,30 @@ jobs:
       - name: Executando testes de unidade
         run: yarn test
 
+  # Versão corrigida do bloco e2e-tests:
   e2e-tests:
     runs-on: ubuntu-latest
     needs: [inspecao]
 
     steps:
-      # Clone do projeto
       - uses: actions/checkout@v4
 
-      # Instalação do Node
       - uses: actions/setup-node@v4
         with:
           node-version: 22.x
 
-      # Instalação do Yarn
       - name: Instalando Yarn
         run: npm install -g yarn
 
-      # Instalação das dependências
       - name: Instalando dependências
         run: yarn
 
-      # Instalação do Playwright
-      - name: Instalando Playwright
-        run: yarn playwright install
+      # ❌ Removido: playwright
+      # - name: Instalando Playwright
+      #   run: yarn playwright install
 
-      # Executar os testes E2E
       - name: Executando Testes E2E
         run: yarn run e2e
-
-      # upload do relatório de testes
-      - uses: actions/upload-artifact@v4
-        if: ${{ !cancelled() }}
-        with:
-          name: relatorio
-          path: ./playwright-report
 
   deploy:
     runs-on: ubuntu-latest
